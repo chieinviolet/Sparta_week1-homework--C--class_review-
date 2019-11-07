@@ -59,20 +59,26 @@ class Customer:
 
 
     def entry_fee(self):
-        if self.age < 20:
+        if self.age < 3:
+            return 0
+        if 3 < self.age < 20:
             return 1000
         if 20 <= self.age <= 65:
             return 1500
-        if 65 < self.age:
+        if 65 < self.age < 75:
             return 1200
+        if 75 < self.age:
+            return 500
 
     def info_csv(self):
         list = [self.full_name(), str(self.age), str(self.entry_fee())]
-        print(list)
 
         result = ','.join(list)
         print(result)
 
 
-ken = Customer(first_name="Ken", family_name="Tanaka", age=15)
+ken = Customer(first_name="Ken", family_name="Tanaka", age=2)
+
+print(ken.age)
+print(ken.entry_fee())
 ken.info_csv()  # "Ken Tanaka,15,1000" という値を返す
