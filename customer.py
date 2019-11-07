@@ -74,7 +74,9 @@ class Customer:
         list = [self.full_name(), str(self.age), str(self.entry_fee())]
 
         result = ','.join(list)
+        result_tab = '\t'.join(list)
         print(result)
+        print(result_tab)
 
 
 ken = Customer(first_name="Ken", family_name="Tanaka", age=2)
