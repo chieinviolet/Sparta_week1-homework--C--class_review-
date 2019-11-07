@@ -75,8 +75,10 @@ class Customer:
 
         result = ','.join(list)
         result_tab = '\t'.join(list)
+        result_pipe = '|'.join(list)
         print(result)
         print(result_tab)
+        print(result_pipe)
 
 
 ken = Customer(first_name="Ken", family_name="Tanaka", age=2)
