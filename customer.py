@@ -70,6 +70,9 @@ class Customer:
         if 75 < self.age:
             return 500
 
+    # csvという名前の関数を作成、
+    # , tab | で区切る。
+    # init関数とその他関数の扱い方を学ぶ
     def info_csv(self):
         list = [self.full_name(), str(self.age), str(self.entry_fee())]
 
